@@ -3,7 +3,7 @@ import pandas as pd
 import plotly.express as px
 import os
 
-PATH = ".."
+PATH = ""
 st.set_page_config(layout="wide")
 
 st.title("Анализ Hurst и корреляций — Домашняя работа по предмету")

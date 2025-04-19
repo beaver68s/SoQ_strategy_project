@@ -37,7 +37,7 @@ st.markdown("""
 st.subheader("График Hurst значений для разных источников данных")
 
 # Путь к файлу с данными Hurst
-data_path = os.path.join("..", "data", "results", "hurst_data.csv")
+data_path = os.path.join("data", "results", "hurst_data.csv")
 
 # Загрузка данных Hurst из CSV-файла
 hurst_df = pd.read_csv(data_path)

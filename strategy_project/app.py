@@ -68,7 +68,7 @@ st.markdown("""
 st.subheader("Hurst Exponent с 95% доверительными интервалами")
 
 # Путь к файлу с данными для доверительных интервалов Hurst
-hurst_ci_path = os.path.join("..", "data", "results", "hurst_ci_data.csv")
+hurst_ci_path = os.path.join("data", "results", "hurst_ci_data.csv")
 hurst_df_ci = pd.read_csv(hurst_ci_path)
 
 # Расчет ошибок для доверительных интервалов
@@ -103,7 +103,7 @@ st.markdown("""
 st.subheader("Variance Ratio (VR) vs Lag q")
 
 # Путь к файлу с данными для Variance Ratio
-vr_df_path = os.path.join("..", "data", "results", "anrew_lo_test.parquet")
+vr_df_path = os.path.join("data", "results", "anrew_lo_test.parquet")
 vr_df = pd.read_parquet(vr_df_path)
 
 # Визуализация линейного графика Variance Ratio
@@ -146,7 +146,7 @@ st.markdown("""
 st.subheader("3D визуализация зависимости корреляции от LookBack и Hold")
 
 # Путь к файлу с данными для корреляции
-returns_table_path = os.path.join("..", "data", "results", "correlation_table.parquet")
+returns_table_path = os.path.join("data", "results", "correlation_table.parquet")
 returns_table = pd.read_parquet(returns_table_path)
 
 # Переименование столбцов для удобства

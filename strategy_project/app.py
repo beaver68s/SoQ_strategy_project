@@ -72,7 +72,7 @@ st.markdown("""
 st.subheader("Hurst Exponent с 95% доверительными интервалами")
 
 # Путь к файлу с данными для доверительных интервалов Hurst
-hurst_ci_path = os.path.join('..', "data", "results", "hurst_ci_data.csv")
+hurst_ci_path = os.path.join(PATH, "data", "results", "hurst_ci_data.csv")
 hurst_df_ci = pd.read_csv(hurst_ci_path)
 
 # Расчет ошибок для доверительных интервалов

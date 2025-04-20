@@ -225,9 +225,9 @@ st.subheader("Бэктест простейшей intra-day стратегии")
 
 col1, col2, col3, col4 = st.columns([1, 2, 2, 1])
 with col2:
-    st.image(PATH+"data/pictures/south_park1.png", caption="Офис Binance", use_column_width=True)
+    st.image(PATH+"data/pictures/south_park1.png", caption="Офис Binance")
 with col3:
-    st.image(PATH+"data/pictures/south_park2.png", use_column_width=True)
+    st.image(PATH+"data/pictures/south_park2.png")
 
 backtesting_data = pd.read_parquet(PATH + 'data/results/backtesting0.parquet')
 col1, col2, col4 = st.columns([1, 2, 1])

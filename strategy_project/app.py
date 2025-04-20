@@ -93,6 +93,8 @@ with col1:
         labels={'hurst_value': 'Hurst Value', 'data': 'Data'},  # Подписи осей
         range_x=[0.4, 0.6]  # Ограничение по оси X от 0.4 до 0.6
     )
+    fig2.add_vline(x=0.5, line_dash="dash", line_color="red", annotation_text="Random Walk")
+
     st.plotly_chart(fig2)
 
 # Вставляем текст с кодом во вторую колонку
@@ -217,3 +219,28 @@ st.markdown("""
     Цвет точек на графике показывает степень корреляции, а их размер зависит от величины корреляции.
     Выберите актив (котировку) из выпадающего списка для анализа данных.
 """)
+
+
+st.subheader("Бэктест простейшей intra-day стратегии")
+
+col1, col2, col3, col4 = st.columns([1, 2, 2, 1])
+with col2:
+    st.image(PATH+"data/pictures/south_park1.png", caption="Офис Binance", use_column_width=True)
+with col3:
+    st.image(PATH+"data/pictures/south_park2.png", use_column_width=True)
+
+backtesting_data = pd.read_parquet(PATH + 'data/results/baktesting0.parquet')
+col1, col2, col3, col4 = st.columns([1, 2, 2, 1])
+with col2:
+    fig_3d = px.scatter_3d(
+        backtesting_data,
+        x="X",
+        y="slippage_usd",
+        z="total_return",
+        color="sharpe",
+        title="3D визуализация бектестинга",
+        height=600,
+        hover_data=['drawdown']
+    )
+
+    st.plotly_chart(fig_3d, use_container_width=True)

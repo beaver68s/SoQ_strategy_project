@@ -230,7 +230,7 @@ with col3:
     st.image(PATH+"data/pictures/south_park2.png", use_column_width=True)
 
 backtesting_data = pd.read_parquet(PATH + 'data/results/backtesting0.parquet')
-col1, col2, col3, col4 = st.columns([1, 2, 2, 1])
+col1, col2, col4 = st.columns([1, 2, 1])
 with col2:
     fig_3d = px.scatter_3d(
         backtesting_data,

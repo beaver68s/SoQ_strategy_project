@@ -240,7 +240,8 @@ with col2:
         color="sharpe",
         title="3D визуализация бектестинга",
         height=600,
-        hover_data=['drawdown']
+        hover_data=['drawdown'],
+        color_continuous_scale=["green", "orange"],
     )
 
     st.plotly_chart(fig_3d, use_container_width=True)
